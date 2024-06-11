@@ -1,7 +1,10 @@
 # geometric-algebra-transformer-gatr
 
+- [Our Github repo](https://github.com/YusuphaJuwara/geometric-algebra-transformer-gatr.git)
 - [Run the Notebook on Colab](https://colab.research.google.com/drive/13MHylFSD-PA3t1F27Eg8NVC0YimZt-F3?authuser=2)
 - [Read the Report](Report.pdf)
+- [Presentation Slides](gatr-presentation-slides.pptx) and [Presentation Slides converted to pdf](gatr-presentation-slides.pdf)
+- [The Authors' paper](https://arxiv.org/pdf/2305.18415) and [Github Repo](https://github.com/Qualcomm-AI-research/geometric-algebra-transformer/tree/main)
 
 ## Results:
 
@@ -48,11 +51,6 @@ Before feeding the data into the GATr network, it needs to be preprocessed and e
 Table 1 specifies how common geometric objects and transformations are mapped to multivectors in $\mathcal{G}_{3,0,1}$. For example, a scalar $\lambda \in \mathbb{R}$ is embedded as $\lambda$, a plane with normal $n \in \mathbb{R}^3$ and origin shift $d \in \mathbb{R}$ is embedded as $d + n$, and a rotation expressed as a quaternion $q \in \mathbb{R}^4$ is embedded as $q_0 + q_1 e_1 + q_2 e_2 + q_3 e_3$.
 
 Furthermore, the first class of the dataset used in this notebook includes idealized arteries with a single outlet and randomly located stenoses. The second class contains bifurcating arteries as shown in the figure 2 below.
-
-| Single Outlet      | Bifurcating |
-| ----------- | ----------- |
-|![Single](https://github.com/YusuphaJuwara/geometric-algebra-transformer-gatr/blob/main/img/single_outlet_random_sample.png?raw=1) | ![Bif](https://github.com/YusuphaJuwara/geometric-algebra-transformer-gatr/blob/main/img/bifurcating_random_sample.png?raw=1)|
-Figure 2
 
 | Single Outlet      | Bifurcating |
 | ----------- | ----------- |
@@ -123,7 +121,7 @@ The geometric product is equivariant, as shown in Appendix A of the paper. Its i
 
 2. **Join Operation:**
 
-The second geometric primitive used in GATr is derived from the join operation, denoted by $x, y \rightarrow (x^* \wedge y^*)^*$. While the notation may appear complicated, the join operation plays a simple role in the architecture: it provides an equivariant map that involves the dual operation, $x \rightarrow x^*$.
+The second geometric primitive used in GATr is derived from the join operation, denoted by $x,y\rightarrow (x^* \wedge y^*)^*$ . While the notation may appear complicated, the join operation plays a simple role in the architecture: it provides an equivariant map that involves the dual operation, $x \rightarrow x^*$.
 
 Including the dual operation is essential for expressivity in the $\mathbb{G}_{3,0,1}$ algebra (the algebra of 3D Euclidean space). **Without dualization, it is impossible to represent even simple functions like the Euclidean distance between two points**, as shown in Appendix A of the paper.
 
